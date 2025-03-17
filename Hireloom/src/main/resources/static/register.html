@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - HIRELOOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Header -->
+     <header>
+        <img src="HIRELOOM.png" alt="HireLoom Logo" class="logo">
+        <nav class="menu-bar">
+            <ul>
+                <li><a href="welcome.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Register Form -->
+    <div class="register-container">
+        <h1>Create an Account</h1>
+        <p>Join HIRELOOM to find jobs or hire top talent.</p>
+        <form action="login.html" method="POST" onsubmit="saveUserRole(event)">
+            <input type="text" class="input-field" placeholder="Full Name" required>
+            <input type="email" class="input-field" placeholder="Email Address" required>
+
+            <div class="password-container">
+                <input type="password" class="input-field" id="password" placeholder="Password" required>
+                <button type="button" class="toggle-password" onclick="togglePassword()">Show</button>
+            </div>
+            
+            <select class="role-select input-field" id="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="applicant">Applicant</option>
+                <option value="recruiter">Recruiter</option>
+            </select>
+            <button type="submit" class="btn">Register</button>
+        </form>
+        <div class="button-container">
+            <button class="google-btn">
+                <img src="Google.png" alt="Google Logo" style="width: 20px; margin-right: 10px;"> Sign in with Google
+            </button>
+            <button class="facebook-btn">
+                <img src="Facebook.png" alt="Facebook Logo" style="width: 20px; margin-right: 10px;"> Sign in with Facebook
+            </button>
+        </div>
+        <p>Already have an account? <a href="login.html">Sign in</a></p>
+    </div>
+
+    <script>
+        function saveUserRole(event) {
+            event.preventDefault();
+            var role = document.getElementById("role").value;
+            if (!role) {
+                alert("Please select a role before proceeding.");
+                return;
+            }
+            localStorage.setItem("userRole", role);
+            window.location.href = "login.html";
+        }
+
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const toggleButton = document.querySelector(".toggle-password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleButton.textContent = "Hide";
+            } else {
+                passwordField.type = "password";
+                toggleButton.textContent = "Show";
+            }
+        }
+    </script>
+</body>
+</html>
