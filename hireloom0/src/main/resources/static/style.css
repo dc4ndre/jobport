@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('bi-background-turquoise-white.png');
+    background-image: url('background1.jpg');
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
@@ -13,7 +13,7 @@ body, html {
     flex-direction: column;
 }
 
-/* Header with Floating Effect */
+/* Header Styles */
 header {
     display: flex;
     align-items: center;
@@ -29,18 +29,17 @@ header {
     height: 60px;
 }
 
-/* Logo */
 .logo {
     width: 80px;
     height: auto;
-    margin-right: 900px; /* to bring it closer to the menu */
+    margin-right: 800px; 
 }
 
-/* Menu Bar */
+/* Navigation Bar */
 .menu-bar {
     flex-grow: 1;
     display: flex;
-    justify-content: flex-start; /* Aligns menu closer to the logo */
+    justify-content: flex-start; 
 }
 
 .menu-bar ul {
@@ -51,7 +50,7 @@ header {
 }
 
 .menu-bar ul li {
-    margin: 0 10px; /* Adjusted spacing */
+    margin: 0 10px; 
 }
 
 .menu-bar ul li a {
@@ -66,7 +65,7 @@ header {
     color: #4caf50;
 }
 
-/* Welcome Box */
+/* Welcome Section */
 .welcome-container {
     background: white;
     padding: 50px;
@@ -90,7 +89,7 @@ header {
     margin-bottom: 20px;
 }
 
-/* Get Started Button */
+/* Button Styles */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -109,7 +108,7 @@ header {
     transform: scale(1.05);
 }
 
-/* Fade-in Animation */
+/* Animation for Fade-In */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -121,7 +120,7 @@ header {
     }
 }
 
-/* Responsive Design */
+/* Media Query for Responsive Design */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -142,7 +141,8 @@ header {
         max-width: 90%;
     }
 }
-/* REGISTER CONTAINER */
+
+/* Register Container */
 .register-container {
     background: rgba(255, 255, 255, 0.8);
     padding: 35px;
@@ -200,6 +200,7 @@ header {
     background: #1b5e20;
 }
 
+/* Social Login Buttons */
 .button-container {
     display: flex;
     gap: 10px;
@@ -231,7 +232,6 @@ header {
     border: none;
 }
 
-/* Hover Animations */
 .google-btn:hover {
     background: #f1f1f1;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -242,6 +242,7 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Password Visibility Toggle */
 .password-container {
     position: relative;
     display: flex;
@@ -263,7 +264,8 @@ header {
     font-size: 14px;
     cursor: pointer;
 }
-/* LOGIN CONTAINER */
+
+/* Login Container */
 .login-container {
     background: rgba(255, 255, 255, 0.8);
     padding: 40px;
@@ -273,11 +275,6 @@ header {
     max-width: 400px;
     margin-top: 120px;
     animation: slideIn 0.8s ease-out;
-}
-
-@keyframes slideIn {
-    from { transform: translateY(-30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
 }
 
 .login-container h1 {
@@ -321,43 +318,7 @@ header {
     margin-top: 10px;
 }
 
-.google-btn, .facebook-btn {
-    flex: 1;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.google-btn {
-    background: white;
-    color: #333;
-    border: 1px solid #ccc;
-}
-
-.facebook-btn {
-    background: #4267B2;
-    color: white;
-    border: none;
-}
-
-/* Hover Animations */
-.google-btn:hover {
-    background: #f1f1f1;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.facebook-btn:hover {
-    background: #365899;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-/* ABOUT US CONTAINER */
-/* About Container */
+/* About Us Container */
 .about-container {
     max-width: 800px;
     margin: 100px auto;
@@ -365,31 +326,107 @@ header {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Initially hidden */
-    transform: translateY(30px); /* Slightly off-screen */
-    animation: fadeIn 1s ease forwards; /* Animates into view */
+    opacity: 0; 
+    transform: translateY(30px); 
+    animation: fadeIn 1s ease forwards; 
 }
 
 h2 {
     color: #4caf50;
 }
 
-/* Hover Effect */
 .about-container:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow */
-    transform: scale(1.02); /* Slight zoom */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.02); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* Animation Keyframes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.main-content {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 1200px; /* Prevents it from stretching too wide on large screens */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-/*DASHBOARD CONTAINER*/
+
+.header {
+   padding: 30px;
+}
+
+.header h2 {
+    color: #1b5e20;
+}
+
+/* Job Listings */
+.job-listings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.job-card {
+    background: white;
+    padding: 20px;
+    border-radius: 0; /* Removes rounded edges */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px); /* Adjust width for three items per row */
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid #ddd; /* Adds a subtle border */
+}
+
+.job-card:hover {
+    transform: scale(1.05);
+}
+
+.job-card h3 {
+    color: #4caf50;
+    margin-bottom: 10px;
+}
+
+.job-card p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.apply-btn {
+    background: #2e7d32;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.apply-btn:hover {
+    background: #1b5e20;
+    transform: scale(1.05);
+}
+
+.profile-header h2 {
+    color: #333;
+}
+
+/* Profile Info Box */
+.profile-info {
+    max-width: 800px;
+    margin: 100px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    opacity: 0; 
+    transform: translateY(30px); 
+    animation: fadeIn 1s ease forwards; 
+}
+
+
+
+
